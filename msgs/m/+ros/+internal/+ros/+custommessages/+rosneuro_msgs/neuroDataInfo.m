@@ -1,0 +1,29 @@
+function [data, info] = neuroDataInfo
+%NeuroDataInfo gives an empty data for rosneuro_msgs/NeuroDataInfo
+% Copyright 2019-2020 The MathWorks, Inc.
+data = struct();
+[data.nsamples, info.nsamples] = ros.internal.ros.messages.ros.default_type('uint16',1);
+[data.nchannels, info.nchannels] = ros.internal.ros.messages.ros.default_type('uint16',1);
+[data.stride, info.stride] = ros.internal.ros.messages.ros.default_type('uint16',1);
+[data.unit, info.unit] = ros.internal.ros.messages.ros.char('string',0);
+[data.transducter, info.transducter] = ros.internal.ros.messages.ros.char('string',0);
+[data.prefiltering, info.prefiltering] = ros.internal.ros.messages.ros.char('string',0);
+[data.isint, info.isint] = ros.internal.ros.messages.ros.default_type('uint8',1);
+[data.minmax, info.minmax] = ros.internal.ros.messages.ros.default_type('double',NaN);
+[data.labels, info.labels] = ros.internal.ros.messages.ros.char('string',NaN);
+info.MessageType = 'rosneuro_msgs/NeuroDataInfo';
+info.constant = 0;
+info.default = 0;
+info.maxstrlen = NaN;
+info.MaxLen = 1;
+info.MinLen = 1;
+info.MatPath = cell(1,9);
+info.MatPath{1} = 'nsamples';
+info.MatPath{2} = 'nchannels';
+info.MatPath{3} = 'stride';
+info.MatPath{4} = 'unit';
+info.MatPath{5} = 'transducter';
+info.MatPath{6} = 'prefiltering';
+info.MatPath{7} = 'isint';
+info.MatPath{8} = 'minmax';
+info.MatPath{9} = 'labels';
